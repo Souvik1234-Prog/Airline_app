@@ -1,0 +1,75 @@
+{% extends "layout_my.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Gradient background */
+        color: #333;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    div {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 60%;
+        margin: 50px auto;
+        animation: slideDown 1.5s ease-out;
+    }
+
+    h3 {
+        color: #2e8b57; /* Green heading */
+        font-size: 2em;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        background-color: #4682b4; /* Blue button */
+        color: white;
+        padding: 12px 25px;
+        border-radius: 5px;
+        font-size: 1.2em;
+        margin-top: 20px;
+        animation: bounceIn 2s ease-in-out;
+    }
+
+    a:hover {
+        background-color: #2e8b57; /* Darker green on hover */
+        transform: scale(1.05); /* Slightly enlarges on hover */
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-30px); }
+        60% { transform: translateY(-15px); }
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<div>
+    <h3>This is a Flight Prices Prediction model based on Machine Learning</h3>
+    <a href="{{ url_for('predict') }}">Click Here!</a>
+</div>
+{% endblock content %}
