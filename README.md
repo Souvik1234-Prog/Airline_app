@@ -1,4 +1,4 @@
-# Flask Course Session 8 - Machine Learning Project
+# Using flask i have made an airline price predictor application
 
 ## Overview
 
